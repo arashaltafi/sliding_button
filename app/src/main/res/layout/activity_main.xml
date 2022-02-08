@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#11000000"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:paddingHorizontal="16dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rlProgress"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <com.example.nahad_sliding.progressLayout.ProgressLayout
+                android:id="@+id/prLayout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:autoProgress="true"
+                app:maxProgress="100" />
+
+            <TextView
+                android:id="@+id/tvProgress"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="@string/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_alignParentStart="true"
+                android:id="@+id/ivProgress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/ic_baseline_close_24" />
+
+        </RelativeLayout>
+
+<!--        app:sliding_showTrack="true"-->
+<!--        app:sliding_trackExtendTo="container"-->
+<!--        app:sliding_trackBackgroundTint="@color/colorGreen"-->
+
+        <com.example.nahad_sliding.slidingButton.SlidingButton
+            android:layoutDirection="ltr"
+            app:sliding_text_login="@string/login"
+            app:sliding_text_swipe="@string/swipe_left"
+            app:sliding_button_background="@drawable/background_login"
+            app:sliding_text_color_login="@color/white"
+            app:sliding_text_color_swipe="@color/white"
+            app:sliding_text_size_swipe="12sp"
+            app:sliding_text_size_login="16sp"
+            android:id="@+id/sbLogin"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:sliding_button_height="100dp"
+            app:sliding_button_width="120dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="start|center_vertical"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTimeLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <View
+                    android:id="@+id/vLineLogout"
+                    android:layout_below="@+id/tvTimeLogout"
+                    android:layout_width="110dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vLineLogout"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDayLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/day"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvDateLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.example.nahad_sliding.slidingButton.SlidingButton>
+
+<!--        app:sliding_showTrack="true"-->
+<!--        app:sliding_trackExtendTo="container"-->
+<!--        app:sliding_trackBackgroundTint="@color/colorRed"-->
+
+<!--        <<com.example.nahad_sliding.slidingButton.SlidingButtonBinding-->
+
+        <com.example.nahad_sliding.slidingButton.SlidingButton
+            android:layoutDirection="rtl"
+            app:sliding_text_login="@string/logout"
+            app:sliding_text_swipe="@string/swipe_right"
+            app:sliding_button_background="@drawable/background_logout"
+            app:sliding_text_color_login="@color/white"
+            app:sliding_text_color_swipe="@color/white"
+            app:sliding_text_size_swipe="12sp"
+            app:sliding_text_size_login="16sp"
+            android:visibility="gone"
+            android:id="@+id/sbLogout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:sliding_button_height="100dp"
+            app:sliding_button_width="120dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:gravity="end|center_vertical"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTimeLogout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <View
+                    android:id="@+id/vLineLogout2"
+                    android:layout_below="@+id/tvTimeLogout2"
+                    android:layout_width="110dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vLineLogout2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDayLogout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/day"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvDateLogout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.example.nahad_sliding.slidingButton.SlidingButton>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

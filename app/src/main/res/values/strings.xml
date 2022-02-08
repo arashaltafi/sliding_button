@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">nahad_sliding</string>
+    <string name="love_it">Move it</string>
+    <string name="default_text_slide"></string>
+
+    <!--    -->
+    <string name="login">ثبت ورود</string>
+    <string name="logout">ثبت خروج</string>
+    <string name="swipe_left">به چپ بکشید</string>
+    <string name="swipe_right">به راست بکشید</string>
+    <string name="time">14:10:54</string>
+    <string name="day">دوشنبه</string>
+    <string name="date">1400/11/11</string>
+</resources>
