@@ -1,39 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
-    android:id="@+id/frame_sliding"
+    android:id="@+id/flSliding"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/slidingText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        tools:textSize="@dimen/default_text_size" />
-
-    <View
-        android:id="@+id/slidingIndicator"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/default_image_height"
-        android:layout_gravity="end|center_vertical"
-        android:clickable="false"
-        android:focusableInTouchMode="false"
-        android:visibility="visible"
-        android:layoutDirection="rtl"/>
-
-
     <RelativeLayout
-        android:id="@+id/slidingImage"
+        android:id="@+id/rlSliding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|end"
-        android:gravity="center|start">
+        android:layout_gravity="center|end">
 
         <LinearLayout
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -45,34 +26,27 @@
                 android:id="@+id/ivSwipe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
+                android:layout_marginEnd="6dp"
                 app:srcCompat="@drawable/ic_swipe" />
 
             <LinearLayout
+                android:gravity="center"
                 android:id="@+id/lnLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/slidingTextLogin"
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSlidingLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="@string/login"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"/>
 
-                <TextView
-                    android:id="@+id/slidingTextSwipe"
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSlidingSwipe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="@string/swipe_left"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
 

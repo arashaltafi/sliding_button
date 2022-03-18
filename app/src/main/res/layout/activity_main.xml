@@ -49,10 +49,6 @@
 
         </RelativeLayout>
 
-<!--        app:sliding_showTrack="true"-->
-<!--        app:sliding_trackExtendTo="container"-->
-<!--        app:sliding_trackBackgroundTint="@color/colorGreen"-->
-
         <com.example.nahad_sliding.slidingButton.SlidingButton
             android:layoutDirection="ltr"
             app:sliding_text_login="@string/login"

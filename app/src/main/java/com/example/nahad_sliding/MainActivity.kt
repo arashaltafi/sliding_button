@@ -80,6 +80,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (isLogin) {
                     Toast.makeText(this, "show login", Toast.LENGTH_SHORT).show()
+                    sbLogin.animatedToStart()
                     sbLogin.visibility = View.VISIBLE
                     sbLogout.visibility = View.GONE
                     rlProgress.visibility = View.GONE
